@@ -1,0 +1,40 @@
+h1 {
+	font-size: 4em;
+	color: #f39c12;
+}
+
+nav .navbar {
+	color: #3498db !important;
+}
+
+.formNTask {
+	margin: 0 auto;
+	width: 350px;
+	display: none;
+}
+
+.formNTask input {
+	border-radius: 8px;
+}
+
+.formNTask input:hover {
+	border-color: orange;
+}
+
+.formNTask button {
+	border-radius: 8px;
+	width: 100px;
+}
+
+#btnCalendar {
+	cursor: pointer;
+	color: rgb(165, 165, 165);
+}
+
+#btnCalendar:hover {
+	color: skyblue;
+}
+
+#newTask {
+	color: #3498db;
+}

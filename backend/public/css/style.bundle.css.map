@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./frontend/styles/app.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;;AAEA;AACA;AACA,C","file":"css/style.bundle.css","sourcesContent":["h1 {\r\n\tfont-size: 4em;\r\n\tcolor: #f39c12;\r\n}\r\n\r\nnav .navbar {\r\n\tcolor: #3498db !important;\r\n}"],"sourceRoot":""}
