@@ -22,16 +22,149 @@
     <div class="collapse navbar-collapse" id="navbarColor03">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#acerca">Acerca de <span class="sr-only">(current)</span></a>
+          <a class="nav-link" data-toggle="modal" data-target="#acerca">Acerca de <span class="sr-only">(current)</span></a>
+          <!-- Modal Acerca -->
+          <div class="modal fade" id="acerca" tabindex="-1" role="dialog" aria-labelledby="acercaModalScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="acercaModalScrollableTitle"><b>Acerca de esta PWA Todo</b></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Esta es una PWA de tareas (TODO).</p> 
+                  <p>En cuanto visites el link de esta PWA te pedirá colocar un acceso directo en tu teléfono.</p>
+                  <p>Para la presente app TODO estamos utilizando</p>
+                  <ul>
+                    <li><a target="_blank" href="http://vanilla-js.com/">Vanilla JS</a>con <a href="http://es6-features.org/">ECMAScript 6</a></li>
+                    <li><a target="_blank" href="https://webpack.js.org/">Webpack</a> para empaquetar todos los módulos y archivos</li>
+                    <li><a target="_blank" href="https://nodejs.org/es/">NodeJS</a> como motor de procesamiento</li>
+                    <li><a target="_blank" href="https://developers.google.com/web/tools/workbox/">Workbox</a> para la gestión del service worker</li>
+                    <li><a target="_blank" href="https://app-manifest.firebaseapp.com/"> App Manifest de Firebase</a> para generar archivo manifest.json</li>
+                    <li><a target="_blank" href="https://bootswatch.com/">Bootswatch</a> y <a href="https://getbootstrap.com/">Bootstrap</a> para la construcción del Front-end</li>
+                    <li><a target="_blank" href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a> para DB cloud</li>
+                    <li><a target="_blank" href="https://www.heroku.com/">Heroku</a> como plataforma PaaS para la presente App</li> 
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#pwa">PWA</a>
+          <a class="nav-link" data-toggle="modal" data-target="#pwa">PWA</a>
+          <!-- Modal PWA -->
+          <div class="modal fade" id="pwa" tabindex="-1" role="dialog" aria-labelledby="pwaModalScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="pwaModalScrollableTitle"><b>Qué es una PWA?</b></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p class="text-justify">Las Progressive Web Apps son experiencias que combinan lo mejor de la Web y lo mejor de las apps. Están disponibles para los usuarios a partir de la primera visita en una pestaña del navegador y no requieren instalación. A medida que el usuario compila progresivamente una relación con la app con el paso del tiempo, se hace más y más poderosa. Se carga rápidamente, incluso con redes débiles, envía notificaciones push relevantes, tiene un ícono en la pantalla principal y se carga como experiencia de pantalla completa y de primer nivel.</p> 
+                  <p>
+                    <ul>
+                      <li><b>Progresiva: </b>funciona para todos los usuarios, sin importar la elección de navegador, porque está construida con mejora progresiva como principio central.</li>
+                      <li><b>Adatable: </b>se adapta a cualquier factor de formulario, sea escritorio, móvil, tablet o lo que venga en el futuro.</li>
+                      <li><b>Independiente de la conectividad: </b>mejorada con service workers para trabajar sin conexión o con redes de mala calidad.</li>
+                      <li><b>Estilo app: </b>al usuario le parece una app con interacciones y navegación estilo app, porque está construida con modelo de shell de app.</li>
+                      <li><b>Fresca: </b>siempre actualizada gracias al proceso de actualización de service worker.</li>
+                      <li><b>Segura: </b>emitida vía HTTPS para evitar intromisiones y para garantizar que el contenido no se haya manipulado.</li>
+                      <li><b>Descubrible: </b>se puede identificar como "app" gracias al manifiesto W3C y al alcance de registro de service worker, lo que permite que los motores de búsqueda la encuentren.</li>
+                      <li><b>Posibilidad de volver a interactuar: </b>facilita la posibilidad de volver a interactuar a través de funciones como notificaciones push.</li>
+                      <li><b>Instalable: </b>les permite a los usuarios "conservar" las apps que les resultan más útiles en su pantalla principal sin la molestia de una tienda de app.</li>
+                      <li><b>Vinculable: </b>se puede compartir fácilmente vía URL, no requiere instalación compleja.</li>
+                    </ul>
+                  </p>
+                  <div class="text-right">
+                    <small>Esta información fue tomada de <a href="https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=es">Google Developers</a></small>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#creador">Creador</a>
+          <a class="nav-link" data-toggle="modal" data-target="#creador">Creador</a>
+          <!-- Modal Creador -->
+          <div class="modal fade" id="creador" tabindex="-1" role="dialog" aria-labelledby="creadorModalScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="pwaModalScrollableTitle"><b>Jonathan Ludeña</b></h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-4 text-center">
+                      <a href="https://twitter.com/jonathanludena" target="_blank"><img src="http://localhost:3000/images/jl.jpg" alt="@jonathanludena"></a> 
+                    </div>
+                    <div class="col-md-8">
+                      <p>Ingeniero de Sistemas con mención Telemática // Web Developer Front-end & Back-end // Amante de la tecnología💻, música🎸y el fútbol ⚽️.. Familia mi vida 🙂</p>
+                      <p class="d-inline m-3">
+                        <a href="https://github.com/jonathanludena" target="_blank"><i class="mr-2 fab fa-github fa-2x"></i></a>
+                        <a href="https://twitter.com/jonathanludena" target="_blank"><i class="mr-2 fab fa-twitter fa-2x"></i></a>
+                        <a href="https://www.instagram.com/jonathanludena/" target="_blank"><i class="mr-2 fab fa-instagram fa-2x"></i></a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="#contact">Contacto</a>
+          <a class="nav-link" data-toggle="modal" data-target="#contacto" data-whatever="@getContact">Contacto</a>
+          <!-- Modal Contacto -->
+          <div class="modal fade" id="contacto" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="contactModalLabel"><b>Contacto</b></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Estas interesado en lo que hago? Déjame un mensaje y te contesto en seguida...</p>
+                  <form method="post" action="/api/tasks/contact">
+                    <div class="form-group">
+                      <label for="name" class="col-form-label">Nombre:</label>
+                      <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="email" class="col-form-label">Email:</label>
+                      <input type="email" name="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="mensaje" class="col-form-label">Mensaje:</label>
+                      <textarea class="form-control" id="mensaje" required></textarea>
+                    </div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <input type="submit" value="Enviar Mensaje" class="btn btn-primary">  
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
       </ul>
     </div>

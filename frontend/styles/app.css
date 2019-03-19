@@ -7,6 +7,10 @@ nav .navbar {
 	color: #3498db !important;
 }
 
+.navbar-collapse a {
+	cursor: pointer;
+}
+
 .formNTask {
 	margin: 0 auto;
 	width: 350px;
@@ -75,4 +79,13 @@ nav .navbar {
 
 .card a {
 	color: white !important;
+}
+
+#creador img {
+	border-radius: 50%;
+	width: 150px;
+}
+
+#creador a {
+	color: orangered;
 }
