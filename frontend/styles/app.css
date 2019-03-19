@@ -26,15 +26,48 @@ nav .navbar {
 	width: 100px;
 }
 
-#btnCalendar {
-	cursor: pointer;
-	color: rgb(165, 165, 165);
+.formNTask select {
+	border-radius: 8px;
 }
 
-#btnCalendar:hover {
-	color: skyblue;
+#btnCalendar,#btnFileImage {
+	cursor: pointer;
+	color: rgb(134, 134, 134);
+}
+
+#btnCalendar:hover,#btnFileImage:hover {
+	color: rgb(86, 196, 240);
 }
 
 #newTask {
+	cursor: pointer;
 	color: #3498db;
+}
+
+.calendar {
+	display: none;
+}
+
+.fileImage {
+	display: none;
+}
+
+.Tasks {
+	margin: 0 auto;
+	width: 95%;
+}
+
+.card {
+	width: 15rem;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	box-shadow: 2px 5px rgba(211, 211, 211, 0.533);
+}
+
+.card img {
+	border-radius: 8px 8px 0 0;
+}
+
+.card .btn {
+	border-radius: 5px;
 }

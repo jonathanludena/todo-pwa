@@ -7,4 +7,69 @@ nav .navbar {
 	color: #3498db !important;
 }
 
+.formNTask {
+	margin: 0 auto;
+	width: 350px;
+	display: none;
+}
+
+.formNTask input {
+	border-radius: 8px;
+}
+
+.formNTask input:hover {
+	border-color: orange;
+}
+
+.formNTask button {
+	border-radius: 8px;
+	width: 100px;
+}
+
+.formNTask select {
+	border-radius: 8px;
+}
+
+#btnCalendar,#btnFileImage {
+	cursor: pointer;
+	color: rgb(134, 134, 134);
+}
+
+#btnCalendar:hover,#btnFileImage:hover {
+	color: rgb(86, 196, 240);
+}
+
+#newTask {
+	cursor: pointer;
+	color: #3498db;
+}
+
+.calendar {
+	display: none;
+}
+
+.fileImage {
+	display: none;
+}
+
+.Tasks {
+	margin: 0 auto;
+	width: 95%;
+}
+
+.card {
+	width: 15rem;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	box-shadow: 2px 5px rgba(211, 211, 211, 0.533);
+}
+
+.card img {
+	border-radius: 8px 8px 0 0;
+}
+
+.card .btn {
+	border-radius: 5px;
+}
+
 /*# sourceMappingURL=style.bundle.css.map*/
