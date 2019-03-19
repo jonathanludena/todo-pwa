@@ -59,7 +59,7 @@ class UI {
               <div class="card-body">
                 <h5 class="card-title">${task.title}</h5>
                 <p class="card-text">${task.description}</p><br/>
-                <a href="#" class="btn btn-danger delete" _id="${task._id}">X</a>
+                <a class="btn btn-danger delete" _id="${task._id}">x</a>
               </div>
               <div class="card-footer">${format(task.created_at)}</div>
             </div>
@@ -74,7 +74,7 @@ class UI {
                 <h5 class="card-title">${task.title}</h5>
                 <p class="card-text">${task.description}</p>
                 <small class="text-muted">${task.calendar} - ${marca}</small><br/>
-                <a href="#" class="btn btn-danger delete" _id="${task._id}">X</a>
+                <a class="btn btn-danger delete" _id="${task._id}">x</a>
               </div>
               <div class="card-footer">${format(task.created_at)}</div>
             </div>
@@ -89,7 +89,7 @@ class UI {
                 <h5 class="card-title">${task.title}</h5>
                 <p class="card-text">${task.description}</p>
                 <small class="text-muted">${marca}</small><br/>
-                <a href="#" class="btn btn-danger delete" _id="${task._id}">X</a>
+                <a class="btn btn-danger delete" _id="${task._id}">x</a>
               </div>
               <div class="card-footer">${format(task.created_at)}</div>
             </div>
@@ -105,7 +105,7 @@ class UI {
                 <h5 class="card-title">${task.title}</h5>
                 <p class="card-text">${task.description}</p>
                 <small class="text-muted">${task.calendar} - ${marca}</small><br/>
-                <a href="#" class="btn btn-danger delete" _id="${task._id}">X</a>
+                <a class="btn btn-danger delete" _id="${task._id}">x</a>
               </div>
               <div class="card-footer">${format(task.created_at)}</div>
             </div>
@@ -119,7 +119,7 @@ class UI {
               <div class="card-body">
                 <h5 class="card-title">${task.title}</h5>
                 <p class="card-text">${task.description}</p><br/>
-                <a href="#" class="btn btn-danger delete" _id="${task._id}">X</a>
+                <a class="btn btn-danger delete" _id="${task._id}">x</a>
               </div>
               <div class="card-footer">${format(task.created_at)}</div>
             </div>

@@ -69,7 +69,12 @@ nav .navbar {
 }
 
 .card .btn {
+	cursor: pointer;
 	border-radius: 5px;
+}
+
+.card a {
+	color: white !important;
 }
 
 /*# sourceMappingURL=style.bundle.css.map*/
