@@ -28,7 +28,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
 
+
 // Rutas API
+app.use('/contact', require('./public/contact.php'))
 app.use('/api/tasks', require('./routes/tasks'));
 
 // Archivos Estáticos

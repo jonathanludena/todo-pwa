@@ -136,7 +136,13 @@ class UI {
     this.renderTasks()
   }
 
-  
+  async sendMessage(datos) {
+    await fetch('/contact', {
+      method: 'POST',
+      body: datos
+    }).then(res => res.json())
+      .then(data => console.log(data))
+  }  
 
 }
 

@@ -57,3 +57,10 @@ document.getElementById('btnFileImage').addEventListener('click', e => {
   e.preventDefault()
   ui.btnImage()
 })
+
+document.getElementById('contactForm').addEventListener('submit', e => {
+  e.preventDefault()
+  const formulario = document.getElementById('contactForm')
+  const datos = new FormData(formulario)
+  ui.sendMessage(datos)
+})
