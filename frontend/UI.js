@@ -137,7 +137,7 @@ class UI {
   }
 
   async sendMessage(datos) {
-    await fetch('/contact', {
+    await fetch('contact.php', {
       method: 'POST',
       body: datos
     }).then(res => res.json())
