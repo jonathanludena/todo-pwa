@@ -62,7 +62,5 @@ document.getElementById('contactForm').addEventListener('submit', e => {
   e.preventDefault()
   const formulario = document.getElementById('contactForm')
   const message = new FormData(formulario)
-  const response = ui.sendMail(message)
-  console.log(response.message)
-
+  ui.sendMail(message)
 })

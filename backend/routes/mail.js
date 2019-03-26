@@ -1,12 +1,28 @@
 const { Router } = require('express')
 const nodeMailer = require('nodemailer')
+const { google } = require('googleapis')
 
 const clientSecret = require('../client_secret')
 
 const router = Router()
+const OAuth2 = google.auth.OAuth2
 
 router.post('/', (req, res) => {
-  console.log(req.body)
+  const oauth2Client = new OAuth2(
+    clientSecret.web.client_id, clientSecret.web.client_secret, "https://developers.google.com/oauthplayground"
+  )
+
+  const accesToken = clientSecret.tokens.accesToken
+  const refreshToken = clientSecret.tokens.refreshToken
+  
+  oauth2Client.on('tokens', (tokens) => {
+    if (tokens.refresh_token) {
+      // store the refresh_token in my database!
+      refreshToken = tokens.refresh_token
+    }
+    accessToken = tokens.access_token
+  });
+
   const smtpTransport = nodeMailer.createTransport({
     host: "smtp.gmail.com",
     port: 465, 
@@ -17,7 +33,8 @@ router.post('/', (req, res) => {
       user: "jludenatest@gmail.com", 
       clientId: clientSecret.web.client_id,
       clientSecret: clientSecret.web.client_secret,
-      refreshToken: "1/UXUrGm94x2dR0XFulHRofZ99Xv4GoP8LttXhyT4g2X0"
+      refreshToken,
+      accesToken
     }
   })
 
@@ -39,8 +56,13 @@ router.post('/', (req, res) => {
     if(error) {
       smtpTransport.close()
       console.log(`Error en envío de mensaje: ${error}`)
+      res.json({
+        success: false,
+        error
+      })
     }
     res.json({
+      success: true,
       message: `Mensaje Enviado`
     })
   })

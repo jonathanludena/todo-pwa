@@ -9,8 +9,7 @@ class MailService {
       method: 'POST',
       body: message
     })
-    const data = await response.json()
-    console.log(data)
+    return await response.json()
   }
 
 }

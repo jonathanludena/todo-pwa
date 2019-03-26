@@ -1,6 +1,7 @@
 import { format } from 'timeago.js'
 import TaskService from "./services/TaskService";
 import MailService from './services/MailService';
+import { DocumentProvider } from 'mongoose';
 
 const taskService = new TaskService()
 const mailService = new MailService()
@@ -140,7 +141,10 @@ class UI {
   }
 
   async sendMail(message) {
-    await mailService.sendMail(message)
+    const data = await mailService.sendMail(message)
+    data.success ? alert(data.message) : alert(data.error)
+    $('#contacto').modal('hide')
+    document.getElementById("contactForm").reset()
   }
 
 }
