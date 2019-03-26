@@ -1,6 +1,9 @@
 import { format } from 'timeago.js'
 import TaskService from "./services/TaskService";
+import MailService from './services/MailService';
+
 const taskService = new TaskService()
+const mailService = new MailService()
 
 class UI {
 
@@ -134,6 +137,10 @@ class UI {
     await taskService.deleteTask(taskId)
     this.btnCancelar()
     this.renderTasks()
+  }
+
+  async sendMail(message) {
+    await mailService.sendMail(message)
   }
 
 }

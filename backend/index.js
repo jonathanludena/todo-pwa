@@ -30,6 +30,7 @@ app.use(cors());
 
 // Rutas API
 app.use('/api/tasks', require('./routes/tasks'));
+app.use('/api/mail', require('./routes/mail'));
 
 // Archivos Estáticos
 app.use(express.static(path.join(__dirname, 'public')));
