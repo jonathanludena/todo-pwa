@@ -42,6 +42,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/style.bundle.css'
     })
+    
   ],
 
   devtool: 'source-map'
