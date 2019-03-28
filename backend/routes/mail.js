@@ -2,25 +2,19 @@ const { Router } = require('express')
 const nodeMailer = require('nodemailer')
 const { google } = require('googleapis')
 
-// const clientSecret = require('../client_secret')
-
 const router = Router()
 const OAuth2 = google.auth.OAuth2
 
 router.post('/', (req, res) => {
   const oauth2Client = new OAuth2(
-    process.env.WEB.client_id, process.env.WEB.client_secret, "https://developers.google.com/oauthplayground"
-    // clientSecret.web.client_id, clientSecret.web.client_secret, "https://developers.google.com/oauthplayground"
+    process.env.CLIENT_ID, process.env.CLIENT_SECRET, "https://developers.google.com/oauthplayground"
   )
 
-  const accesToken = process.env.TOKENS.accesToken
-  const refreshToken = process.env.TOKENS.refreshToken
-  // const accesToken = clientSecret.tokens.accesToken
-  // const refreshToken = clientSecret.tokens.refreshToken
+  const accesToken = process.env.ACCESS_TOKEN
+  const refreshToken = process.env.REFRESH_TOKEN
   
   oauth2Client.on('tokens', (tokens) => {
     if (tokens.refresh_token) {
-      // store the refresh_token in my database!
       refreshToken = tokens.refresh_token
     }
     accessToken = tokens.access_token
@@ -34,10 +28,8 @@ router.post('/', (req, res) => {
     auth: {
       type: "OAuth2", 
       user: "jludenatest@gmail.com", 
-      clientId: process.env.WEB.client_id,
-      clientSecret: process.env.WEB.client_secret,
-      // clientId: clientSecret.web.client_id,
-      // clientSecret: clientSecret.web.client_secret,
+      clientId: process.env.CLIENT_ID,
+      clientSecret: process.env.CLIENT_SECRET,
       refreshToken,
       accesToken
     }
