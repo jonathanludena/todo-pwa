@@ -1,7 +1,8 @@
 
 class MailService {
   constructor() {
-    this.URI = 'http://localhost:3000/api/mail'
+    // this.URI = 'http://localhost:3000/api/mail' // DEV
+    this.URI = '/api/mail' // PRODUCTION
   }
 
   async sendMail(message) {

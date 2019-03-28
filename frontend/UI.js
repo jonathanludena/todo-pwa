@@ -59,7 +59,7 @@ class UI {
         div.innerHTML = `
           <div class="col" >
             <div class='animated bounceIn card mr-1'>
-              <img src="http://localhost:3000/${task.imagePath}" alt="imageTask" class="card-img-top img-fluid" />
+              <img src="${task.imagePath}" alt="imageTask" class="card-img-top img-fluid" />
               <div class="card-body">
                 <h5 class="card-title">${task.title}</h5>
                 <p class="card-text">${task.description}</p><br/>
@@ -104,7 +104,7 @@ class UI {
         div.innerHTML = `
           <div class="col">
             <div class='animated bounceIn card mr-1'>
-              <img src="http://localhost:3000/${task.imagePath}" alt="imageTask" class="card-img-top img-fluid" />
+              <img src="${task.imagePath}" alt="imageTask" class="card-img-top img-fluid" />
               <div class="card-body">
                 <h5 class="card-title">${task.title}</h5>
                 <p class="card-text">${task.description}</p>

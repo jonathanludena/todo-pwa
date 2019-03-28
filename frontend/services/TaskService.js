@@ -1,7 +1,8 @@
 class TaskService {
 
   constructor() {
-    this.URI = 'http://localhost:3000/api/tasks'
+    // this.URI = 'http://localhost:3000/api/tasks' // DEV
+    this.URI = '/api/tasks' // PRODUCTION
   }
 
   async getTasks() {
